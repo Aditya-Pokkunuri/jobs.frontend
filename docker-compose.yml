@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+        - VITE_SUPABASE_KEY=${VITE_SUPABASE_KEY}
+        - VITE_API_URL=${VITE_API_URL}
+    container_name: ottobon-jobs-frontend
+    ports:
+      - "5175:80"
+    restart: unless-stopped
+    env_file:
+      - .env
