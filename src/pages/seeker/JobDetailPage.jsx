@@ -163,11 +163,13 @@ const JobDetailPage = () => {
 
                             <div className="flex flex-col sm:flex-row gap-4 shrink-0 w-full lg:w-auto">
                                 {user ? (
-                                    <Link to={`/jobs/${id}/match`} className="w-full sm:w-auto">
-                                        <button className="w-full bg-black text-white px-10 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.25em] hover:bg-gray-900 transition-all flex items-center justify-center gap-3 shadow-xl">
-                                            <Sparkles size={18} /> Run Match IQ
-                                        </button>
-                                    </Link>
+                                    <>
+                                        <Link to={`/jobs/${id}/match`} className="w-full sm:w-auto">
+                                            <button className="w-full bg-black text-white px-10 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.25em] hover:bg-gray-900 transition-all flex items-center justify-center gap-3 shadow-xl">
+                                                <Sparkles size={18} /> Run Match IQ
+                                            </button>
+                                        </Link>
+                                    </>
                                 ) : (
                                     <Link to="/login" className="w-full sm:w-auto">
                                         <button className="w-full bg-black text-white px-10 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.25em] hover:opacity-90 transition-all">
@@ -281,17 +283,17 @@ const JobDetailPage = () => {
                         </div>
                     </BentoCard>
 
-                    <BentoCard delay={0.3} className="bg-black border-4 border-black text-white shadow-[12px_12px_0px_rgba(0,0,0,0.1)]">
-                        <h2 className="text-[10px] font-black text-white mb-10 pb-4 border-b border-white/20 flex items-center gap-3 uppercase tracking-[0.4em]">
-                            <div className="w-1.5 h-4 bg-white" />
+                    <BentoCard delay={0.3}>
+                        <h2 className="text-sm font-black text-black mb-10 pb-4 border-b-2 border-black flex items-center gap-3 uppercase tracking-[0.3em]">
+                            <div className="w-2 h-4 bg-black" />
                             Content Optimization Tips
                         </h2>
                         {job.resume_guide_generated ? (
-                            <ul className="space-y-6">
+                            <ul className="space-y-4">
                                 {job.resume_guide_generated.map((point, idx) => (
-                                    <li key={idx} className="flex gap-4 items-start p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
-                                        <CheckCircle size={20} className="text-white mt-0.5 shrink-0" />
-                                        <span className="text-white opacity-80 text-[10px] font-bold uppercase tracking-widest leading-loose">{point}</span>
+                                    <li key={idx} className="flex gap-4 items-start p-4 bg-gray-50 border border-black/5 rounded-2xl hover:bg-gray-100 transition-colors">
+                                        <CheckCircle size={18} className="text-black mt-0.5 shrink-0" />
+                                        <span className="text-gray-600 text-[10px] font-bold uppercase tracking-widest leading-loose">{point}</span>
                                     </li>
                                 ))}
                             </ul>
