@@ -273,12 +273,12 @@ const TailorResumePage = () => {
                         )}
                     </BentoCard>
 
-                    <BentoCard delay={0.2} className="bg-black text-white">
-                        <div className="flex items-center gap-4 mb-6">
-                            <BrainCircuit size={24} className="text-white" />
-                            <h2 className="text-[10px] font-black uppercase tracking-[0.2em]">Optimization Engine</h2>
+                    <BentoCard delay={0.2}>
+                        <div className="flex items-center gap-4 mb-6 pb-6 border-b-2 border-black/10">
+                            <BrainCircuit size={24} className="text-black" />
+                            <h2 className="text-[10px] font-black text-black uppercase tracking-[0.2em]">Optimization Engine</h2>
                         </div>
-                        <p className="text-sm font-medium text-white/50 leading-relaxed">
+                        <p className="text-xs font-bold text-gray-500 leading-relaxed bg-gray-50 p-6 rounded-2xl border border-black/5">
                             The tailored resume is dynamically restructured to highlight the most relevant experiences targeting the specific core competencies found in this job description.
                         </p>
                     </BentoCard>
